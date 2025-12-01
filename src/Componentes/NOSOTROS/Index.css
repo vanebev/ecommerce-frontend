@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Source+Sans+3:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* ----- CONTENEDOR GENERAL ----- */
+.nosotros {
+  background-color: rgb(28, 33, 36);     /* igual inicio */
+  padding: 35px 20px;
+  color: #f7f7f7;
+  font-family: 'Source Sans 3', sans-serif;
+  min-height: 65vh;
+}
+
+/* ----- TÍTULO PRINCIPAL ----- */
+.nosotros-info h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.4rem, 3vw, 2.9rem);
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.nosotros-info strong {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #f3d34a;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+
+/* ----- TEXTO PRINCIPAL ----- */
+.nosotros-info {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.55;
+  font-family: 'Fraunces', serif;
+  color: #e8e8e8;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+/* ----- IMAGEN ----- */
+.nosotros-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.nosotros-img img {
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(199, 45, 45, 0.45);
+}
+
+/* ----- SECCIÓN VALORES ----- */
+.valores-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.valores-container h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.1rem, 2.5vw, 2.5rem);
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+/* GRID DE VALORES */
+.valores-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+}
+
+.valor {
+  background: radial-gradient(120% 100% at 12% 0%, #a14242 0%, #7d2f2f 70%);
+  padding: 18px;
+  border-radius: 12px;
+  width: 260px;
+  color: #fff7ef;
+  box-shadow: 0 6px 20px rgba(0,0,0,.3);
+  transition: 0.3s ease;
+}
+
+.valor:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(0,0,0,.22);
+}
+
+.valor h3 {
+  font-size: 22px;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 10px;
+  color: #ffd166;
+}
+
+.valor p {
+  font-size: 15px;
+  line-height: 1.4;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 768px) {
+  .nosotros-info {
+    text-align: center;
+  }
+
+  .nosotros-img img {
+    width: 90%;
+  }
+}

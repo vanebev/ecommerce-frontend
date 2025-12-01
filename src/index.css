@@ -1,0 +1,292 @@
+/* ============================================================
+   BASE GENERAL DEL DOCUMENTO
+   ============================================================ */
+
+body { 
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, "Times New Roman", Times, serif; 
+}
+
+main { 
+  flex: 1;
+  height: auto;
+  padding: 0 !important;
+  min-height: 80vh;
+}
+
+
+/* ============================================================
+   HEADER Y BARRA DE NAVEGACIÓN
+   ============================================================ */
+
+header {
+  width: 100%;
+  height: auto;
+}
+
+/* Contenedor general del nav */
+header nav {
+  margin: 0;
+  background: linear-gradient(90deg, rgb(141, 72, 11), red);
+  box-shadow: 0 6px 14px rgba(0,0,0,.08);
+  display: grid;
+  justify-content: center;
+}
+
+/* Lista de enlaces del menú */
+header nav ul { 
+  list-style: none;
+  padding: 0;
+  margin: 0.6vh;
+  display: flex;
+  padding: 6px 8px; 
+  max-width: 1100px; 
+  width: 100%;
+  justify-content: space-evenly;
+  gap: 14px;
+}
+
+header nav ul li {
+  width: auto;
+  height: auto;
+}
+
+/* Estilo de cada botón del menú */
+header nav ul li a {
+  text-decoration: none;
+  min-width: 120px;         
+  background-color: #f6edf6;
+  margin: 0 auto;
+  text-align: center;
+  padding: 14px 26px;
+  border-radius: 999px;
+  color: #1e1e1f;
+  font-weight: 700;
+  letter-spacing: .2px;
+  display: inline-flex;      
+  align-items: center;
+  justify-content: center;    
+  transition: background-color .25s ease,
+              box-shadow .25s ease,
+              transform .25s ease;
+}
+
+/* Hover y estado activo */
+header nav ul li a:hover,
+header nav ul li a.activo {
+  background-color: red;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transform: translateY(-2px) scale(1.04);
+}
+
+
+/* ============================================================
+   LOGO
+   ============================================================ */
+
+header > div {
+  display: flex;  /* contenedor principal */
+}
+
+@media (max-width: 920px){
+  header > div { grid-template-columns: 120px 1fr 56px; }
+}
+
+@media (max-width: 680px){
+  header > div { grid-template-columns: 1fr; }
+  #logo, #boton-carrito { height: 48px; }
+}
+
+/* Caja del logo */
+#logo {
+  height: 54px;
+  background-color: #D0B098;
+  text-align: center;
+  line-height: 54px;
+  font-size: 22px;
+}
+
+/* Imagen del logo con animación */
+#logo img {
+  height: 54px;
+  max-width: 100%;
+  transition: transform 2s ease-in-out 0.1s;
+}
+
+#logo img:hover {
+  transform: rotateY(360deg);
+}
+
+
+/* ============================================================
+   BUSCADOR
+   ============================================================ */
+
+#barra-busqueda {
+  height: 54px;
+  width: 87%;
+  background: linear-gradient(90deg, rgb(207, 178, 153), rgb(240, 130, 130));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form dentro del buscador */
+#barra-busqueda form {
+  width: 85%;
+  height: 40px;
+  max-width: 720px;
+
+  display: flex;
+  align-items: center;
+
+  background: #fff;
+  border: 1px solid #e6dcd1;
+  border-radius: 999px;
+  padding: 0 10px 0 14px;
+}
+
+/* Animación del label */
+@keyframes labelGlow {
+  0% { color: #7a6d63; text-shadow: none; }
+  50% { color: #4da6ff; text-shadow: 0 0 8px rgba(77,166,255,0.7); }
+  100% { color: #7a6d63; text-shadow: none; }
+}
+
+#barra-busqueda form label {
+  background: transparent;
+  color: #7a6d63;
+  font-weight: 700;
+  animation: labelGlow 2.5s ease-in-out infinite;
+}
+
+/* Campo del buscador */
+#barra-busqueda form input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #333;
+  font-size: 2.5vh;
+}
+
+
+/* Botón del buscador con animación */
+@keyframes pulseGlow {
+  0% { transform: scale(1); box-shadow: none; filter: brightness(1); }
+  50% { transform: scale(1.05); box-shadow: 0 0 12px rgba(110,231,183,0.7); filter: brightness(1.1); }
+  100% { transform: scale(1); box-shadow: none; filter: brightness(1); }
+}
+
+#barra-busqueda form input[type="submit"] {
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 800;
+  background: linear-gradient(180deg, #a7f3d0, #6ee7b7);
+  color: #073b28;
+  animation: pulseGlow 2.5s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+#barra-busqueda form input[type="submit"]:hover {
+  transform: scale(1.15);
+}
+
+
+/* ============================================================
+   BOTÓN DE CARRITO
+   ============================================================ */
+
+#boton-carrito {
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 54px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+#boton-carrito:hover {
+  transform: scale(1.5);
+}
+
+#boton-carrito img {
+  height: 54px;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+footer {
+  font-size: 20px;
+  background: #2a1f52;
+  color: #eef;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Animación del texto */
+@keyframes zoomColor {
+  0% { transform: scale(0.5); color: #4da6ff; }
+  50% { transform: scale(1.1); color: #ff6600; }
+  100% { transform: scale(1); color: #4da6ff; }
+}
+
+footer p, footer h4 {
+  font-size: 20px;
+  font-family: 'Lobster', cursive;
+  animation: zoomColor 10s ease-in-out infinite;
+}
+
+
+/* ============================================================
+   FOOTER – COLUMNS
+   ============================================================ */
+
+.site-footer {
+  margin-top: auto;
+  background: #111;
+  color: #eee;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap: 16px;
+  text-align: center;
+}
+
+.site-footer a { 
+  color: #eee;
+  text-decoration: none;
+  animation: zoomColor 3s ease-in-out infinite;
+  display: inline-block;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  text-decoration: underline;
+}
+
+.site-footer .footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 10;
+}
+
+
+/* ============================================================
+   RESPONSIVE GENERAL
+   ============================================================ */
+
+@media (max-width: 760px){
+  #barra-busqueda { width: 100%; padding: 0 8px; }
+  #barra-busqueda form { flex-wrap: nowrap; gap: 8px; }
+  #barra-busqueda form label { display: none; }
+}

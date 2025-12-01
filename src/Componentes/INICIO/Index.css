@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Source+Sans+3:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* -------------------- CONTENEDOR INICIO -------------------- */
+
+.inicio {
+  font-family: 'Source Sans 3', sans-serif;
+  line-height: 1.65;
+  color: #f7f7f7;
+  background-color: rgb(28, 33, 36);
+  text-align: center;
+  padding: 25px;
+}
+
+.bienvenida.lateral {
+  margin: 5px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;   
+  gap: 12px;
+  width: 100%;                   
+  text-align: left;              
+  padding-left: 10px;            
+}
+
+.bienvenida.lateral h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  color: #f1e9e9;
+  margin: 0;
+  line-height: 1.1;
+  white-space: nowrap;          
+}
+
+
+.marca-tienda {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(1.7rem, 2.5vw, 2.2rem);
+  color: #f3d34a;
+  text-shadow: 0 2px 6px rgba(0,0,0,.4);
+  letter-spacing: 1px;
+}
+
+#logo-bienvenida img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #f3d34a;
+  box-shadow: 0 3px 8px rgba(0,0,0,.4);
+}
+
+
+/* -------------------- TÍTULO LISTADO -------------------- */
+
+.inicio h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.8rem, 3vw, 3.2rem);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #222;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.inicio .section-cards-header h1 {
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+/* -------------------- CARDS CONTENEDOR -------------------- */
+
+.inicio .section-cards-body {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px 18px;
+  color: #1a1a1a;
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 1px;
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+}
+
+/* -------------------- CADA CARD -------------------- */
+
+.inicio .section-cards-body > section {
+  flex: 0 0 260px;
+  margin: 20px !important;
+  box-sizing: border-box;
+  padding: 14px 14px 16px;
+  color: #fff7ef;
+  background: radial-gradient(120% 100% at 12% 0%, #a14242 0%, #7d2f2f 70%);
+  box-shadow: 2px 2px 5px 5px rgb(163, 60, 64);
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 10px;
+  transition: transform .15s ease, box-shadow .25s ease, filter .2s ease;
+}
+
+.inicio .section-cards-body > section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(0,0,0,.22);
+  filter: brightness(1.03);
+}
+
+.inicio .section-cards-body > section h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+/* -------------------- IMÁGENES DE PRODUCTO -------------------- */
+
+.inicio .section-cards-body > section img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: contain;
+  max-height: 180px;
+  margin: 0 0 8px;
+  background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(0,0,0,.06));
+  border-radius: 12px;
+  box-shadow: 2px 2px 1px 1px rgb(41, 2, 35);
+  transition: transform .35s ease, filter .35s ease;
+  transform-origin: center;
+  will-change: transform, filter;
+}
+
+.inicio .section-cards-body > section img:hover {
+  transform: scale(1.06) translateY(-2px);
+  filter: saturate(1.05) contrast(1.05);
+}
+
+/* -------------------- TEXTOS DENTRO DE LA CARD -------------------- */
+
+.inicio .section-cards-body > section p {
+  margin: 0 0 6px;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.inicio .section-cards-body > section p b {
+  color: #ffd166;
+  font-weight: 800;
+}
+
+.inicio .section-cards-body > section p:nth-of-type(5) {
+  overflow: hidden;
+  line-height: var(--lh);
+  max-height: calc(var(--lh) * 1em * var(--lines));
+  position: relative;
+}
+
+.inicio section p {
+  margin-bottom: 10px;
+}
+
+/* -------------------- BOTÓN AGREGAR AL CARRITO -------------------- */
+
+.inicio section button[id^="btnComprar-"] {
+  justify-self: center;
+  margin: 30px auto 5px;
+  padding: 7px 18px;
+  background: var(--accent, rgb(205, 198, 24));
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 999px;
+  border: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,.18);
+  transition: transform .12s ease, box-shadow .2s ease, filter .18s ease;
+  cursor: pointer;
+}
+
+.inicio section button[id^="btnComprar-"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px rgba(0,0,0,.3);
+  filter: brightness(1.05);
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+
+@media (max-width: 768px) {
+  .inicio .section-cards-body > section {
+    flex: 1 1 100%;
+    max-width: 320px;
+  }
+}

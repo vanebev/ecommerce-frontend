@@ -1,0 +1,66 @@
+/* ============================================================
+   CONTENEDOR PRINCIPAL (ÁREA DE DROP / CLICK)
+   ============================================================ */
+
+.ObtenerFoto #drop {
+  border: 3px dashed blue;          /* borde punteado para indicar área interactiva */
+  width: 400px;
+  height: 200px;
+
+  margin: 10px auto;
+  padding: 10px;
+
+  background-color: lightgrey;       /* fondo suave */
+  font-size: 24px;
+
+  display: flex;                      /* centra el texto e iconos */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ============================================================
+   LABEL (TEXTO QUE RECIBE EL CLICK PARA SUBIR FOTO)
+   ============================================================ */
+
+.ObtenerFoto label {
+  color: red;
+  cursor: pointer;                   /* mano para clic */
+  width: 100%;
+  height: 100%;
+
+  display: flex;                      /* centrado */
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ============================================================
+   INPUT DE ARCHIVO (OCULTO)
+   ============================================================ */
+
+.ObtenerFoto input {
+  display: none;                      /* se oculta para usar el label */
+}
+
+
+/* ============================================================
+   TEXTO INFORMATIVO BAJO EL DROP
+   ============================================================ */
+
+.ObtenerFoto span {
+  color: red;
+  margin-top: 4px;
+}
+
+
+/* ============================================================
+   VISTA PREVIA DE LA IMAGEN SELECCIONADA
+   ============================================================ */
+
+.ObtenerFoto img {
+  height: 150px;
+  display: block;
+  margin: auto;
+}

@@ -1,0 +1,257 @@
+/* ============================================================
+   IMPORTACIÓN DE FUENTES
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+/* ============================================================
+   BASE GENERAL DE LA PÁGINA CONTACTO
+   ============================================================ */
+
+body{
+  min-height: 160vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenedor principal */
+.contacto {
+  flex: 1 0 auto;
+  background:#f5f5f5;
+  padding:24px;
+  width:100%;
+  margin:0 auto;
+}
+
+/* Título principal */
+.contacto h1 {
+  margin: 16px 0;
+  font-family: 'Lobster', cursive;
+  font-size: 35px;
+  color: #4da6ff;
+  transition: color 0.6s ease;
+}
+
+
+/* ============================================================
+   FORMULARIO DE CONTACTO
+   ============================================================ */
+
+/* Caja del formulario */
+.contacto-form {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+  width: 85%;
+}
+
+/* Cada campo del formulario */
+.campo {
+  display: grid;
+  gap: 6px;
+}
+
+.campo label {
+  font-size: 14px;
+  color: #111827;
+}
+
+/* Inputs y textarea */
+.campo input,
+.campo textarea {
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Efecto focus */
+.campo input:focus,
+.campo textarea:focus {
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(14,165,233,0.15);
+}
+
+/* Mensajes de error */
+.error {
+  color: #dc2626;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+
+/* ============================================================
+   BOTONES Y ACCIONES
+   ============================================================ */
+
+.acciones {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.acciones button {
+  background: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform .12s ease, opacity .12s ease;
+}
+
+/* Estado disabled */
+.acciones button:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+/* Mensaje de éxito */
+.ok {
+  color: #16a34a;
+  font-size: 14px;
+}
+
+
+/* ============================================================
+   INFORMACIÓN LATERAL DE CONTACTO
+   ============================================================ */
+
+.contacto-info {
+  margin-top: 28px;
+  padding: 16px;
+  border-top: 1px solid #e5e7eb;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+/* Subtítulo */
+.contacto-info h2 {
+  font-size: 18px;
+  margin: 0 0 12px 0;
+  color: #1f2937;
+}
+
+/* Cada fila de información */
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+/* Íconos */
+.info-item img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  filter: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  box-sizing: content-box;
+}
+
+/* tamaños personalizados por ícono */
+.info-item img[alt="Instagram"] { transform: scale(0.8); }
+.info-item img[alt="Teléfono"] { transform: scale(1.5); }
+.info-item img[alt="Email"] { transform: scale(1.5); }
+
+.info-item img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* Texto lateral */
+.info-item p {
+  margin: 0;
+  font-size: 18px;
+  color: #374151;
+}
+
+/* Enlaces */
+.info-item a {
+  color: #0ea5e9;
+  text-decoration: none;
+}
+
+.info-item a:hover {
+  text-decoration: underline;
+}
+
+
+/* ============================================================
+   RESPONSIVE – FORMULARIO Y CONTACTO INFO
+   ============================================================ */
+
+@media (max-width: 640px) {
+
+  .contacto-info { padding: 12px; }
+
+  .info-item { gap: 8px; }
+
+  .info-item img { width: 24px; height: 24px; }
+
+  .acciones {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .acciones button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* ============================================================
+   ENCABEZADO LATERAL (TÍTULO + LOGO)
+   ============================================================ */
+
+/* Contenedor del título lateral */
+.contacto-header.lateral {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  flex-wrap: wrap;
+}
+
+/* Título “Contactate con Tienda Libre” */
+.contacto-header.lateral h2 {
+  font-family: 'Lobster', cursive;
+  font-size: 28px;
+  color: #3385ff;
+  margin: 0;
+  line-height: 1.1;
+}
+
+/* Marca resaltada (Tienda Libre) */
+.marca-tienda {
+  font-family: 'Lobster', cursive;
+  font-size: 32px;
+  color: #1d4ed8;
+  text-shadow: 0 2px 4px rgba(0,0,0,.12);
+}
+
+/* Logo al lado del texto */
+.contacto-logo img {
+  width: 46px;
+  height: 46px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #3385ff;
+  box-shadow: 0 3px 6px rgba(0,0,0,.2);
+}

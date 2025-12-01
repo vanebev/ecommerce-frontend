@@ -1,0 +1,119 @@
+/* ============================================================
+   SECCIÓN PRINCIPAL DEL CARRITO
+   ============================================================ */
+
+.carrito {
+    padding: 20px;
+    min-height: 600px;
+}
+
+/* Títulos */
+.carrito h1, 
+.carrito h2 {
+    text-align: center;
+}
+
+
+/* ============================================================
+   BOTONES PRINCIPALES (BORRAR TODO / PEDIR)
+   ============================================================ */
+
+.carrito .carrito_borrar_pedir {
+    margin: 15px auto;
+    display: block;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/* Botón borrar carrito completo */
+.carrito .carrito_borrar  {
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+}
+
+/* Botón generar pedido */
+.carrito .carrito_pedir  {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* ============================================================
+   TABLA DEL CARRITO
+   ============================================================ */
+
+/* Celdas generales */
+.carrito th, 
+.carrito td {
+    border: 1px solid black;
+    width: 150px;
+    height: 30px;
+    padding: 20px;
+}
+
+/* Tabla */
+.carrito table {
+    border-collapse: collapse;
+    margin: 5px auto;
+}
+
+/* Encabezados */
+.carrito th {
+    text-transform: uppercase;
+    background-color: #111;
+    color: white;
+    font-size: 18px;
+}
+
+/* Filas */
+.carrito td {
+    font-size: 18px;
+}
+
+
+/* ============================================================
+   BOTONES DENTRO DE LA TABLA
+   ============================================================ */
+
+/* Botón eliminar un producto */
+.carrito table button.btnBorrar {
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: orangered;
+    color: white;
+    cursor: pointer;
+}
+
+/* Botones sumar/restar cantidad */
+.carrito table button.btnIncDec {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* Colores de botones + y - */
+.carrito table button.btnDec,
+.carrito table button.btnInc {
+    background-color: blue;
+    color: white;
+}
+
+
+/* ============================================================
+   CONTENEDOR DE WALLET (MERCADOPAGO)
+   ============================================================ */
+
+.carrito #wallet-container {
+    width: 25%;
+    margin: 40px auto;
+}

@@ -1,0 +1,93 @@
+/* ============================================================
+   ICONO DE CARRITO + NÚMERO (BADGE)
+   ============================================================ */
+
+/* Contenedor del ícono del carrito (posición relativa para el badge) */
+.icono-carrito {
+  position: relative;
+  display: inline-block;
+}
+
+/* Imagen del carrito */
+.icono-carrito img {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+/* Numerito del carrito (badge siempre visible) */
+.badge-carrito {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background-color: crimson;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  display: flex;          /* centrado del número */
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 9999;
+  opacity: 1 !important;  /* aseguramos que no lo opaque otra regla */
+}
+
+
+/* ============================================================
+   ENMAQUETADO RESPONSIVE GENERAL HEADER / CARRITO / TABLAS
+   ============================================================ */
+
+/* Ajustes para pantallas medianas (header flexible) */
+@media (max-width: 920px){
+  header > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  #barra-busqueda { 
+    flex: 1 1 320px; 
+    min-width: 260px; 
+  }
+
+  #logo, 
+  #boton-carrito { 
+    flex: 0 0 auto; 
+  }
+}
+
+/* Menú de navegación se parte en varias líneas en pantallas chicas */
+@media (max-width: 680px){
+  header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  header nav ul li {
+    width: auto;
+  }
+}
+
+/* Hacer carrito y tablas scrolleables horizontalmente en mobile */
+@media (max-width: 760px){
+  .carrito, 
+  .table-responsive { 
+    overflow-x: auto; 
+  }
+
+  .carrito table, 
+  .table-responsive table { 
+    min-width: 720px; 
+  }
+}
+
+/* En dispositivos sin hover (celus), evitamos el zoom del carrito */
+@media (hover: none){
+  #boton-carrito:hover { 
+    transform: none; 
+  }
+}

@@ -1,0 +1,60 @@
+/* ============================================================
+   FOOTER PRINCIPAL
+   ============================================================ */
+/* Contenedor general del footer */
+.site-footer {
+  background: #ead84d;                 /* color amarillo suave */
+  color: #222;                         /* texto oscuro */
+  padding: 16px 24px;
+  margin-top: auto;
+
+  display: grid;                       /* columnas responsivas */
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+
+/* ============================================================
+   COLUMNAS DEL FOOTER
+   ============================================================ */
+/* Cada columna / bloque */
+.footer-col {
+  padding: 8px;
+}
+
+
+/* Títulos de cada sección del footer */
+.footer-col h4 {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #1b1b1b;
+}
+
+
+/* ============================================================
+   TEXTO Y ENLACES
+   ============================================================ */
+
+/* Párrafos descriptivos dentro de cada columna */
+.site-footer p {
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+/* Enlaces del footer */
+.site-footer a {
+  color: #222;
+  text-decoration: none;
+  transition: color .25s ease;
+}
+
+/* Hover en los enlaces */
+.site-footer a:hover {
+  color: #000;
+  text-decoration: underline;
+}
