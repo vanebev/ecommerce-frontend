@@ -1,6 +1,7 @@
 
 const produccion = import.meta.env.MODE == 'production'
-const url= produccion?'/api/upload/' : 'http://localhost:8080/api/upload/'
+const url = produccion? '/api/upload': 'http://localhost:8080/api/upload'
+
 
 export const enviarArchivoImgen = (formdata, cbProgress, cbUrlFoto) =>{
      
@@ -14,9 +15,9 @@ export const enviarArchivoImgen = (formdata, cbProgress, cbUrlFoto) =>{
             const rta = JSON.parse(xhr.response)
             console.log(rta)
 
-            const {urlFoto:urlFotoAux} = rta
-            const urlFoto = (produccion? '' : 'http://localhost:8080') + urlFotoAux
-            if(typeof cbUrlFoto == 'function')cbUrlFoto(urlFoto)
+            const { urlFoto } = rta
+            if (typeof cbUrlFoto === 'function') cbUrlFoto(urlFoto)
+
             
         }
         else (
